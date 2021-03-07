@@ -1,5 +1,8 @@
 # KawaseSeminarProgrammingMaterials
 
+## First Time Slide
+https://docs.google.com/presentation/d/1jvaBd_rLNTmrY2NVpBajqVYrQKHr_bqSktMTsXcOZFY/edit?usp=sharing
+
 ## Quick Start
 1. google colabでfileというメニューをクリックし"open notebook"(ノートブックを開く)を選択
 [![Image from Gyazo](https://i.gyazo.com/5571637d811b67a850f31bcf7edde39c.png)](https://gyazo.com/5571637d811b67a850f31bcf7edde39c)
