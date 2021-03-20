@@ -1,0 +1,37 @@
+# Exercise 03-3 問題(1)回答
+from selenium import webdriver
+
+# ChromeDriver起動
+def generate_dirver():
+  options = webdriver.ChromeOptions()
+  options.add_argument('--headless')
+  options.add_argument('--no-sandbox')
+  options.add_argument('--disable-dev-shm-usage')
+  driver = webdriver.Chrome('chromedriver',options=options)
+  return driver
+
+driver = generate_dirver()
+
+#ここに記述せよ
+import requests as req
+from bs4 import BeautifulSoup
+
+driver.get('https://www.google.co.jp')
+
+search_bar = driver.find_element_by_name("q")
+
+input_data = input()
+search_bar.send_keys(input_data)
+
+search_bar.submit()
+
+elem_h3 = driver.find_element_by_xpath('//a/h3')
+
+elem_a = elem_h3.find_element_by_xpath('..')  
+
+url = elem_a.get_attribute("href")
+
+response = req.get(url)
+
+soup = BeautifulSoup(response.content, "lxml")
+soup.find('title')
